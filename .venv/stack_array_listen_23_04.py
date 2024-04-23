@@ -1,37 +1,34 @@
 #Taschenrechner
-a = []
-for i in range(4):
-    print (i+1, ". Zahl eingeben: ")
-    a[i]= int(input())
-
-op = input("Operator eingeben: ")
-
-if op == "+":
-    print(a[0] + a[1])
-elif op == "-":
-    print(a[0] - a[1])
-elif op == "*":
-    print(a[0] * a[1])
-elif op == "/":
-    print(a[0] / a[1])
-
 #Implementieren sie einen RPM Taschenrechner mit einer Stackteife von 4
+
+
 stack = []
-op = ["+", "-", "*", "/"]
-for i in range(4):
-    stack.append(int(input()))
-    if stack[i] in op:
-        if stack[i] == "+":
-            stack[i-2] = stack[i-2] + stack[i-1]
-        elif stack[i] == "-":
-            stack[i-2] = stack[i-2] - stack[i-1]
-        elif stack[i] == "*":
-            stack[i-2] = stack[i-2] * stack[i-1]
-        elif stack[i] == "/":
-            stack[i-2] = stack[i-2] / stack[i-1]
-        stack.pop()
-        stack.pop()
+
+for i in len(stack+1):
+
+    if len(stack) >= 4:
+        print("Stack ist voll")
+        break
+    else:
+        print(i+1, ". Zahl eingeben: ")
+        stack.append(input())
+
+    if stack[i] == "+":
+        print()
+    elif stack[i] == "-":
+        print(stack[0] - stack[1])
+
+    elif stack[i] == "*":
+        print(stack[0] * stack[1])
+
+    elif stack[i] == "/":
+        print(stack[0] / stack[1])
 
 
-#vontinue #break
+def add(self):
+    if len(self.stack) >= 2:
+        a = self.pop()
+        b = self.pop()
+        self.push(a+b)
+#continue #break
 #was passiert wenn ich die in einer Schleife verwende?
