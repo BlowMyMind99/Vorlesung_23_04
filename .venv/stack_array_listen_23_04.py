@@ -32,7 +32,7 @@ for i in range(4):
         stack.pop()
         stack.pop()
 
-
+#Hallooo
 
 #vontinue #break
 #was passiert wenn ich die in einer Schleife verwende?
