@@ -50,3 +50,23 @@ evenSquares = list(filter(is_even, range(10)))
 
 evenSquares = [x*x for x in filter(lambda x: x % 2 == 0, range(10))]
 print(evenSquares)
+
+#labda functions cans alsp be assigned with function names as "oneliner"
+is_even = lambda x: x % 2 == 0
+
+#above code is equivalent to the following code
+def is_even(x):
+    return x % 2 == 0
+
+
+#list comprehension can be used to create dictionaries
+#essential in a dictionary comprehension are
+#   * the curly brackets {}#
+#   * the key-value-pair
+#   * the "for" keyword
+#   * the variable to iterate over
+#   * the "in" keyword
+#   * the iterable to iterate over
+squares = {x: x*x for x in range(10)}
+print(squares)
+
